@@ -26,7 +26,6 @@ copyEdge2.rotate(1.5708*3);
 copyEdge2.translate(0, -50);
 copyEdge2.mirror();
 
-
 edges.push(edge1);
 edges.push(edge2);
 
