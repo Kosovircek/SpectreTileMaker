@@ -37,16 +37,17 @@ export class ControlEdge {
 }
 
 export class CopyEdge {
-  constructor(svg) {
+  constructor(svg, controlEdge) {
     this.svg = svg;
+    this.controlEdge = controlEdge;
     this.path = document.createElementNS("http://www.w3.org/2000/svg", 
                                          "path");
     this.transformMat = glMatrix.mat2d.create();
     this.lineSegements = new Array();
   }
-  redraw(lineSegments) {
+  redraw() {
     this.path.remove();
-    lineSegments.forEach(s => {
+    this.controlEdge.segments.forEach(s => {
       if (s.path instanceof Bezier)
         console.log("drawingBezier");
         this.drawBezier(s.controls);
