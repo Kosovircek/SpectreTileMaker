@@ -9,6 +9,12 @@
       <path d="M 100,100 Q 130,50 200,100 250,120 300,100 350,0 400,100 450,150 500,100"></path>
       -->
     </svg>
+
+    <div id="resetDiv">
+      <label for="numControlsInput">control points num:</label>
+      <input id="numControlsInput" type="text" value="2"></input>
+      <button id ="resetBtn" type="submit">reset</button>
+    </div>
   </body>
 
   <script src="gl-matrix.js" type="module"></script>
@@ -30,6 +36,14 @@
     left: 0px;
     top: 0px;
     background-color: white;
+  }
+  #resetDiv{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  #numControlsInput {
+    width: 2rem;
   }
   </style>
 </html>

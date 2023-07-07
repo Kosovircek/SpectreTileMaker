@@ -49,7 +49,6 @@ export class CopyEdge {
     this.path.remove();
     this.controlEdge.segments.forEach(s => {
       if (s.path instanceof Bezier)
-        console.log("drawingBezier");
         this.drawBezier(s.controls);
     });
   }
