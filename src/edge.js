@@ -24,14 +24,27 @@ export class ControlEdge {
   }
   addBezier(points) {
     let controls = new Array();
-    points.forEach(p => controls.push(
-                              new ControlPoint(this.svg, 
-                                               p[0], p[1],
-                                               this.transformMat)));
+    for(let i=0; i<points.length; i+=2) {
+      let p = points[i];
+      let p1 = points[i+1];
+      let color = this.getRandColor();
+      console.log(color);
+      controls.push(new ControlPoint(this.svg, 
+                                     p[0], p[1],
+                                     this.transformMat,
+                                     color));
+      controls.push(new ControlPoint(this.svg, 
+                                     p1[0], p1[1],
+                                     this.transformMat,
+                                     color));
+    }
     this.segments.push({
       path: new Bezier(this.svg),
       controls: controls 
     });
+  }
+  getRandColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
   }
     
 }

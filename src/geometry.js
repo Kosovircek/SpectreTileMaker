@@ -26,12 +26,13 @@ export class Bezier {
 }
 
 export class ControlPoint {
-  constructor(svg, x, y, transformMat) {
+  constructor(svg, x, y, transformMat, fillColor) {
     this.x = x;
     this.y = y;
     this.circle = document.createElementNS("http://www.w3.org/2000/svg", 
                                            "circle");
     this.circle.setAttribute("r", "5");
+    this.circle.setAttribute("fill", "#"+fillColor);
     svg.appendChild(this.circle);
     this.circle.onmousedown = (event) => {
       mouse.selected = this;
