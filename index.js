@@ -129,3 +129,12 @@ function resetTile() {
   globalRedraw();
 }
 
+document.getElementById("hideControlsBtn").onclick = () => {
+  let controls = document.getElementsByTagName("circle");
+  Array.from(controls).forEach(c => {
+    if(c.style.visibility != "hidden")
+      c.style.visibility = "hidden";
+    else
+      c.style.visibility = "visible";
+  });
+};
