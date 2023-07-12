@@ -22,74 +22,74 @@ function makeTile(curve) {
     },
     {
       mirror: false,
-      x: 95,
+      x: 95-1.69873046875,
       y: -125,
       rotation: toRad(-30)
     },
     {
       mirror: true,
-      x: 163,
-      y: -107,
+      x: 163-1.3974609375,
+      y: -107+0.30126953125,
       rotation: toRad(60)
     },
     {
       mirror: false,
-      x: 162,
-      y: -20,
+      x: 162-0.3974609375,
+      y: -20-0.09619140625,
       rotation: toRad(120)
     },
     {
       mirror: true,
-      x: 180,
-      y: 48,
+      x: 180-0.09619140625,
+      y: 48+0.205078125,
       rotation: toRad(30)
     },
     {
       mirror: false,
-      x: 224,
-      y: 125,
+      x: 224-0.794921875,
+      y: 125-1.794921875,
       rotation: toRad(90)
     },
     {
       mirror: false,
-      x: 174,
-      y: 176,
+      x: 174-0.794921875,
+      y: 176-2.794921875,
       rotation: toRad(0)
     },
     {  
       mirror: true,
-      x: 99,
-      y: 219,
+      x: 99-0.794921875,
+      y: 219-2.49365234375,
       rotation: toRad(-60)
     },
     {  
       mirror: false,
-      x: 31,
-      y: 237,
+      x: 31-1.09619140625,
+      y: 237-2.1923828125,
       rotation: toRad(30)
     },
     {  
       mirror: true,
-      x: -56,
-      y: 237,
+      x: -56-0.69873046875,
+      y: 237-2.1923828125,
       rotation: toRad(-30)
     },
     {  
       mirror: false,
-      x: -124,
-      y: 219,
+      x: -124-1,
+      y: 219-2.49365234375,
       rotation: toRad(60)
     },
     {  
       mirror: false,
-      x: -124,
-      y: 133,
+      x: -124-1,
+      y: 133-3.09619140625,
       rotation: toRad(-60)
     },
     {  
       mirror: true,
       x: -75,
-      y: 46,
+      y: 46-2.69873046875,
       rotation: toRad(-60)
     },
   ]);
@@ -111,7 +111,7 @@ function resetTile() {
   let numControls = parseInt(document.getElementById("numControlsInput").value);
   let curve = [];
   let c = 1;
-  for (let i=-50; i<50; i+=100/(numControls/2)) {
+  for (let i=-50; i<50; i+=100/(numControls)) {
     if(c==1) {
       curve.push([i,0]);
       curve.push([i,-10]);
