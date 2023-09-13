@@ -18,13 +18,13 @@ function makeTile(curve) {
       mirror: true,
       x: 50,
       y: -50,
-      rotation: toRad(-90)
+      rotation: toRad(360-90)
     },
     {
       mirror: false,
       x: 95-1.69873046875,
       y: -125,
-      rotation: toRad(-30)
+      rotation: toRad(360-30)
     },
     {
       mirror: true,
@@ -60,7 +60,7 @@ function makeTile(curve) {
       mirror: true,
       x: 99-0.794921875,
       y: 219-2.49365234375,
-      rotation: toRad(-60)
+      rotation: toRad(360-60)
     },
     {  
       mirror: false,
@@ -72,7 +72,7 @@ function makeTile(curve) {
       mirror: true,
       x: -56-0.69873046875,
       y: 237-2.1923828125,
-      rotation: toRad(-30)
+      rotation: toRad(360-30)
     },
     {  
       mirror: false,
@@ -84,13 +84,13 @@ function makeTile(curve) {
       mirror: false,
       x: -124-1,
       y: 133-3.09619140625,
-      rotation: toRad(-60)
+      rotation: toRad(360-60)
     },
     {  
       mirror: true,
       x: -75,
       y: 46-2.69873046875,
-      rotation: toRad(-60)
+      rotation: toRad(360-60)
     },
   ]);
 }
@@ -138,3 +138,5 @@ document.getElementById("hideControlsBtn").onclick = () => {
       c.style.visibility = "visible";
   });
 };
+
+
